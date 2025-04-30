@@ -63,7 +63,7 @@ const Project = () => {
             <h2 className="text-3xl font-bold">02</h2>
             <h3 className="text-2xl font-bold mt-4">OCHI</h3>
             <p className=" font-semibold">
-              Clone of OCHI design using animation.
+              Clone of OCHI design with animation.
             </p>
             <ul className="flex gap-5 mt-4">
               <li className="px-2 py-1.5 bg-black text-white rounded-full cursor-pointer hover:bg-gray-700">
@@ -115,8 +115,16 @@ const Project = () => {
               </li>
             </ul>
             <div className="flex gap-5 items-center mt-2">
-              <IoOpenOutline size={20} />
-              <p className="underline font-semibold cursor-pointer">Source</p>
+              <a href="https://docs-app-two-indol.vercel.app/" target="_blank">
+                <IoOpenOutline size={20} />
+              </a>
+              <a
+                href="https://github.com/KanikaBhandari24/Docs-App"
+                target="_blank"
+                className="underline font-semibold cursor-pointer"
+              >
+                Source
+              </a>
             </div>
           </div>
         </div>
@@ -148,8 +156,16 @@ const Project = () => {
               </li>
             </ul>
             <div className="flex gap-5 items-center mt-2">
-              <IoOpenOutline size={20} />
-              <p className="underline font-semibold cursor-pointer">Source</p>
+              <a href="https://travel-app-eta-ruby.vercel.app/" target="_blank">
+                <IoOpenOutline size={20} />
+              </a>
+              <a
+                href="https://github.com/KanikaBhandari24/Travel-App"
+                target="_blank"
+                className="underline font-semibold cursor-pointer"
+              >
+                Source
+              </a>
             </div>
           </div>
         </div>
@@ -164,7 +180,7 @@ const Project = () => {
           </div>
           <div>
             <h2 className="text-3xl font-bold">05</h2>
-            <h3 className="text-2xl font-bold mt-4">DOCS APP</h3>
+            <h3 className="text-2xl font-bold mt-4">Macbook Pro - Apple</h3>
             <p className=" font-semibold">Apple macbook pro landing page.</p>
             <ul className="flex gap-5 mt-4">
               <li className="px-2 py-1.5 bg-black text-white rounded-full cursor-pointer hover:bg-gray-700">
@@ -179,13 +195,13 @@ const Project = () => {
             </ul>
             <div className="flex gap-5 items-center mt-2">
               <a
-                href="https://ochi-design-theta.vercel.app/"
+                href="https://mac-book-pro-landing-page.vercel.app/"
                 className="cursor-pointer"
               >
                 <IoOpenOutline size={20} />
               </a>
               <a
-                href="https://github.com/KanikaBhandari24/OCHI"
+                href="https://github.com/KanikaBhandari24/MacBook-Pro-Landing-Page"
                 className="underline font-semibold cursor-pointer"
               >
                 Source
