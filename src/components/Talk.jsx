@@ -7,56 +7,70 @@ import { FaArrowCircleRight } from "react-icons/fa";
 
 const Talk = () => {
   return (
-    <div className="w-full h-screen dm-sans" id="contact">
-    <div className="flex px-20 py-30">
-      <div>
-        <form action="" className="max-w-[50%]">
-          <input
-            type="text"
-            placeholder="Your name"
-            className="border-2 rounded-lg pr-61 pl-5 py-3"
-          />
-          <input
-            type="text"
-            placeholder="Your Email"
-            className="border-2 rounded-lg pr-61 py-3 pl-5 mt-4"
-          />
-          <input
-            type="text"
-            placeholder="Your website (If exists)"
-            className="border-2 rounded-lg pr-61 pl-5 py-3 mt-4"
-          />
-          <textarea
-            type="text"
-            placeholder="How can I help?"
-            className="border-2 rounded-lg pr-60 pl-5 py-3 mt-4"
-          />
-        </form>
-        <div className="flex gap-5 mt-10 cursor-pointer items-center">
-          <button className="text-white bg-black px-5 py-3 text-lg rounded-lg font-semibold hover:bg-gray-800 cursor-pointer flex items-center">Get In Touch
-            <div className="ml-2"><FaArrowCircleRight size={20} /></div>
-          </button>
-          <FaXTwitter size={30} />
-          <BsGithub size={30} />
-          <FaLinkedin size={30} />
-          <BiLogoGmail size={30} />
+    <div className="w-full h-full dm-sans" id="contact">
+      <div className="flex flex-col lg:flex-row px-5 lg:px-20 py-30 gap-10">
+        <div className="w-full lg:w-1/2">
+          <form action="" className="w-full">
+            <input
+              type="text"
+              placeholder="Your name"
+              className="border-2 w-full rounded-lg px-5 py-3 mb-4"
+            />
+            <input
+              type="text"
+              placeholder="Your Email"
+              className="border-2 w-full rounded-lg px-5 py-3 mb-4"
+            />
+            <input
+              type="text"
+              placeholder="Your website (If exists)"
+              className="border-2 w-full rounded-lg px-5 py-3 mb-4"
+            />
+            <textarea
+              placeholder="How can I help?"
+              className="border-2 w-full rounded-lg px-5 py-3 h-32 mb-4"
+            ></textarea>
+          </form>
+
+          <div className="flex flex-wrap gap-5 mt-6 items-center">
+            <button className="text-white bg-black px-5 py-3 text-lg rounded-lg font-semibold hover:bg-gray-800 flex items-center">
+              Get In Touch
+              <FaArrowCircleRight size={20} className="ml-2" />
+            </button>
+            <a href="https://x.com/Kanikaa78" target="_blank" rel="noopener noreferrer">
+              <FaXTwitter size={30} />
+            </a>
+            <a href="https://github.com/KanikaBhandari24" target="_blank" rel="noopener noreferrer">
+              <BsGithub size={30} />
+            </a>
+            <a href="https://www.linkedin.com/in/kanika-bhandari-001k/" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin size={30} />
+            </a>
+            <a href="mailto:k.anikabhandari2417@gmail.com">
+              <BiLogoGmail size={30} />
+            </a>
+          </div>
+        </div>
+
+        <div className="ml-10 w-full lg:w-1/2 max-w-[40%]">
+          <h1 className="special-gothic text-4xl sm:text-5xl lg:text-6xl tracking-tight">
+            Let's talk for something special
+          </h1>
+          <p className="text-gray-500 mt-6 max-w-full">
+            I seek to push the limits of creativity to create high-engaging,
+            user-friendly, and memorable interactive experiences.
+          </p>
+          <h2 className="mt-6 text-lg sm:text-xl font-bold break-all">
+            k.anikabhandari2417@gmail.com
+          </h2>
         </div>
       </div>
 
-      <div className="">
-        <h1 className="special-gothic text-6xl tracking-tight">Let's talk for something special</h1>
-        <p className="text-gray-500 mt-10 max-w-[90%]">
-          I seek to push the limits of creativity to create high-engaging,
-          user-friendly, and memorable interactive experiences.
-        </p>
-        <h2 className="mt-10 text-xl font-bold">k.anikabhandari2417@gmail.com</h2>
-      </div>
-      
-    </div>
-    <footer className="bg-black py-15.5 text-white px-20 flex items-center justify-between">
-      <h1 className="text-2xl font-semibold">Kanika - Portfolio</h1>
-      <h2 className="text-2xl font-semibold">2025</h2>
-    </footer>
+      <footer className="bg-black py-6 text-white px-5 lg:px-20 flex flex-col sm:flex-row items-center justify-between hover:bg-green-600"
+      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        <h1 className="text-xl sm:text-2xl font-semibold hover:underline cursor-pointer hover:text-black">Kanika - Portfolio</h1>
+        <h2 className="text-xl sm:text-2xl font-semibold mt-2 sm:mt-0">2025</h2>
+      </footer>
     </div>
   );
 };
