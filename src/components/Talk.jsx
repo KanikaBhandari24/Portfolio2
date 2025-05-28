@@ -32,43 +32,65 @@ const Talk = () => {
             ></textarea>
           </form>
 
-          <div className="flex flex-wrap gap-5 mt-6 items-center">
-            <button className="text-white bg-black px-5 py-3 text-lg rounded-lg font-semibold hover:bg-gray-800 flex items-center">
+          <div className="flex gap-4 mt-6 items-center">
+            <button className="text-white bg-black px-5 py-3 text-lg rounded-lg font-semibold hover:bg-gray-800 flex items-center mb-4 sm:mb-0">
               Get In Touch
               <FaArrowCircleRight size={20} className="ml-2" />
             </button>
-            <a href="https://x.com/Kanikaa78" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://x.com/Kanikaa78"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-4 sm:mb-0"
+            >
               <FaXTwitter size={30} />
             </a>
-            <a href="https://github.com/KanikaBhandari24" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/KanikaBhandari24"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-4 sm:mb-0"
+            >
               <BsGithub size={30} />
             </a>
-            <a href="https://www.linkedin.com/in/kanika-bhandari-001k/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/kanika-bhandari-001k/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-4 sm:mb-0"
+            >
               <FaLinkedin size={30} />
             </a>
-            <a href="mailto:k.anikabhandari2417@gmail.com">
+            <a
+              href="mailto:k.anikabhandari2417@gmail.com"
+              className="mb-4 sm:mb-0"
+            >
               <BiLogoGmail size={30} />
             </a>
           </div>
         </div>
 
         <div className="ml-10 w-full lg:w-1/2 max-w-[40%]">
-          <h1 className="special-gothic text-4xl sm:text-5xl lg:text-6xl tracking-tight">
+          <h1 className="special-gothic text-4xl sm:text-5xl lg:text-6xl tracking-tight sm:max-w-full">
             Let's talk for something special
           </h1>
           <p className="text-gray-500 mt-6 max-w-full">
             I seek to push the limits of creativity to create high-engaging,
             user-friendly, and memorable interactive experiences.
           </p>
-          <h2 className="mt-6 text-lg sm:text-xl font-bold break-all">
+          <h2 className="mt-6 md:text-lg sm:text-sm font-bold ">
             k.anikabhandari2417@gmail.com
           </h2>
         </div>
       </div>
 
-      <footer className="bg-black py-6 text-white px-5 lg:px-20 flex flex-col sm:flex-row items-center justify-between hover:bg-green-600"
-      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-        <h1 className="text-xl sm:text-2xl font-semibold hover:underline cursor-pointer hover:text-black">Kanika - Portfolio</h1>
+      <footer
+        className="bg-black py-6 text-white px-5 lg:px-20 flex flex-col sm:flex-row items-center justify-between hover:bg-green-600"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        <h1 className="text-xl sm:text-2xl font-semibold hover:underline cursor-pointer hover:text-black">
+          Kanika - Portfolio
+        </h1>
         <h2 className="text-xl sm:text-2xl font-semibold mt-2 sm:mt-0">2025</h2>
       </footer>
     </div>
