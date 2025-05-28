@@ -4,6 +4,15 @@ import { IoOpenOutline } from "react-icons/io5";
 const projects = [
   {
     id: "01",
+    title: "CollegeTips.in",
+    description: "Made an interactive Gallery for CollegeTips.in",
+    image: "/Gallery.png",
+    tags: ["React", "Tailwind"],
+    live: "https://internship-photo-gallery.vercel.app/",
+    source: "https://github.com/KanikaBhandari24/Internship-PhotoGallery",
+  },
+  {
+    id: "02",
     title: "36Studio",
     description: "Enjoy watching chillies by clicking on Thirtysixstudio!",
     image: "/36studio.png",
@@ -12,7 +21,7 @@ const projects = [
     source: "https://github.com/KanikaBhandari24/36Studio",
   },
   {
-    id: "02",
+    id: "03",
     title: "OCHI",
     description: "Clone of OCHI design with animation.",
     image: "/ochi.png",
@@ -21,7 +30,7 @@ const projects = [
     source: "https://github.com/KanikaBhandari24/OCHI",
   },
   {
-    id: "03",
+    id: "04",
     title: "DOCS APP",
     description: "A To-Do-List app with motions.",
     image: "/docs.png",
@@ -30,7 +39,7 @@ const projects = [
     source: "https://github.com/KanikaBhandari24/Docs-App",
   },
   {
-    id: "04",
+    id: "05",
     title: "GoTravel",
     description: "A responsive travel app.",
     image: "/travel.png",
@@ -39,7 +48,7 @@ const projects = [
     source: "https://github.com/KanikaBhandari24/Travel-App",
   },
   {
-    id: "05",
+    id: "06",
     title: "Macbook Pro - Apple",
     description: "Apple macbook pro landing page.",
     image: "/macbook.png",
