@@ -1,5 +1,10 @@
-import React from "react";
+"use client";
 import { IoOpenOutline } from "react-icons/io5";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const projects = [
   {
@@ -75,51 +80,98 @@ const projects = [
     source: "https://github.com/KanikaBhandari24/MacBook-Pro-Landing-Page",
   },
 ];
+const bestProjects = projects.filter(p =>
+  ["01", "04", "05"].includes(p.id)
+);// top ones
+
+const ProjectCard = ({ proj }) => (
+  <div className="flex flex-col items-start border rounded-xl shadow-md p-2 h-full max-w-sm">
+    <img
+      src={proj.image}
+      alt={proj.title}
+      className="w-full h-35 object-cover rounded-md mb-2"
+    />
+    <h3 className="text-base font-semibold leading-tight">{proj.title}</h3>
+    <p className="text-xs text-gray-600 line-clamp-2">{proj.description}</p>
+    <ul className="flex flex-wrap gap-1 mt-1">
+      {proj.tags.map((tag, i) => (
+        <li
+          key={i}
+          className="px-2 py-0.5 bg-black text-white rounded-full text-[10px]"
+        >
+          {tag}
+        </li>
+      ))}
+    </ul>
+    <div className="flex gap-2 mt-2 items-center text-xs">
+      <a href={proj.live} target="_blank" rel="noopener noreferrer">
+        <IoOpenOutline size={16} />
+      </a>
+      <a
+        href={proj.source}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline"
+      >
+        Source
+      </a>
+    </div>
+  </div>
+);
 
 const Project = () => {
   return (
-    <div className="w-full h-full px-6 md:px-20 py-10 space-y-16 dm-sans" id="project">
-      <h1 className="special-gothic text-center text-4xl tracking-tight">My Projects</h1>
-      {projects.map((proj, idx) => (
-        <div
-          key={proj.id}
-          className={`flex flex-col lg:flex-row ${idx % 2 !== 0 ? "lg:flex-row-reverse" : ""} items-center gap-8`}
-        >
-          <img
-            src={proj.image}
-            alt={proj.title}
-            className="w-full max-w-md h-auto border rounded-2xl shadow-lg"
-          />
-          <div className="flex-1 space-y-2">
-            <h2 className="text-3xl font-bold">{proj.id}</h2>
-            <h3 className="text-2xl font-bold mt-2">{proj.title}</h3>
-            <p className="font-semibold">{proj.description}</p>
-            <ul className="flex flex-wrap gap-2 mt-4">
-              {proj.tags.map((tag, i) => (
-                <li
-                  key={i}
-                  className="px-3 py-1.5 bg-black text-white rounded-full text-sm cursor-pointer hover:bg-gray-700"
-                >
-                  {tag}
-                </li>
-              ))}
-            </ul>
-            <div className="flex gap-4 items-center mt-4">
-              <a href={proj.live} target="_blank" rel="noopener noreferrer">
-                <IoOpenOutline size={22} />
-              </a>
-              <a
-                href={proj.source}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline font-semibold text-sm"
-              >
-                Source
-              </a>
-            </div>
-          </div>
-        </div>
-      ))}
+    <div className="w-full h-screen px-20 dm-sans flex flex-col justify-center mt-6" id="project">
+      <div className="flex flex-col gap-3 overflow-y-auto h-full">
+        <h1 className="special-gothic text-center text-2xl sm:text-4xl tracking-tight mb-2">My Projects</h1>
+        {/* Best Projects */}
+        <section className="mb-5">
+          <h1 className="special-gothic text-left text-xl md:text-2xl font-bold mb-2">
+            Best Projects
+          </h1>
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={16}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+          >
+            {bestProjects.map((proj) => (
+              <SwiperSlide key={proj.id}>
+                <ProjectCard proj={proj} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </section>
+
+        {/* All Projects */}
+        <section>
+          <h1 className="special-gothic text-left text-xl md:text-2xl font-bold mb-2">
+            All Projects
+          </h1>
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={16}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+          >
+            {projects.map((proj) => (
+              <SwiperSlide key={proj.id}>
+                <ProjectCard proj={proj} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </section>
+      </div>
     </div>
   );
 };
